@@ -13,6 +13,11 @@
 		58D6E7871A970CC900D03EA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D6E7861A970CC900D03EA2 /* Images.xcassets */; };
 		58D6E78A1A970CC900D03EA2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D6E7881A970CC900D03EA2 /* LaunchScreen.xib */; };
 		58D6E7961A970CCA00D03EA2 /* RealmSample2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6E7951A970CCA00D03EA2 /* RealmSample2Tests.swift */; };
+		58D6E7AB1A971CA900D03EA2 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 58D6E7AA1A971CA900D03EA2 /* libc++.dylib */; };
+		58D6E7AD1A971CC300D03EA2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58D6E7AC1A971CC300D03EA2 /* Realm.framework */; };
+		58D6E7AF1A971CD500D03EA2 /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6E7AE1A971CD500D03EA2 /* RLMSupport.swift */; };
+		58D6E7B21A971CFB00D03EA2 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6E7B11A971CFB00D03EA2 /* Book.swift */; };
+		58D6E7B41A971F5000D03EA2 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6E7B31A971F5000D03EA2 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		58D6E78F1A970CC900D03EA2 /* RealmSample2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmSample2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58D6E7941A970CC900D03EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58D6E7951A970CCA00D03EA2 /* RealmSample2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSample2Tests.swift; sourceTree = "<group>"; };
+		58D6E7AA1A971CA900D03EA2 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		58D6E7AC1A971CC300D03EA2 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../../Downloads/realm-cocoa-0.90.5/ios/Realm.framework"; sourceTree = "<group>"; };
+		58D6E7AE1A971CD500D03EA2 /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RLMSupport.swift; path = "../../../Downloads/realm-cocoa-0.90.5/Swift/RLMSupport.swift"; sourceTree = "<group>"; };
+		58D6E7B11A971CFB00D03EA2 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		58D6E7B31A971F5000D03EA2 /* AddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58D6E7AD1A971CC300D03EA2 /* Realm.framework in Frameworks */,
+				58D6E7AB1A971CA900D03EA2 /* libc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +71,7 @@
 		58D6E7711A970CC900D03EA2 = {
 			isa = PBXGroup;
 			children = (
+				58D6E7AA1A971CA900D03EA2 /* libc++.dylib */,
 				58D6E77C1A970CC900D03EA2 /* RealmSample2 */,
 				58D6E7921A970CC900D03EA2 /* RealmSample2Tests */,
 				58D6E77B1A970CC900D03EA2 /* Products */,
@@ -77,12 +90,16 @@
 		58D6E77C1A970CC900D03EA2 /* RealmSample2 */ = {
 			isa = PBXGroup;
 			children = (
+				58D6E7B01A971CE300D03EA2 /* model */,
+				58D6E7AC1A971CC300D03EA2 /* Realm.framework */,
+				58D6E7A91A971C6400D03EA2 /* realm */,
 				58D6E77F1A970CC900D03EA2 /* AppDelegate.swift */,
 				58D6E7811A970CC900D03EA2 /* ViewController.swift */,
 				58D6E7831A970CC900D03EA2 /* Main.storyboard */,
 				58D6E7861A970CC900D03EA2 /* Images.xcassets */,
 				58D6E7881A970CC900D03EA2 /* LaunchScreen.xib */,
 				58D6E77D1A970CC900D03EA2 /* Supporting Files */,
+				58D6E7B31A971F5000D03EA2 /* AddView.swift */,
 			);
 			path = RealmSample2;
 			sourceTree = "<group>";
@@ -110,6 +127,22 @@
 				58D6E7941A970CC900D03EA2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58D6E7A91A971C6400D03EA2 /* realm */ = {
+			isa = PBXGroup;
+			children = (
+				58D6E7AE1A971CD500D03EA2 /* RLMSupport.swift */,
+			);
+			name = realm;
+			sourceTree = "<group>";
+		};
+		58D6E7B01A971CE300D03EA2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				58D6E7B11A971CFB00D03EA2 /* Book.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58D6E7B21A971CFB00D03EA2 /* Book.swift in Sources */,
 				58D6E7821A970CC900D03EA2 /* ViewController.swift in Sources */,
+				58D6E7B41A971F5000D03EA2 /* AddView.swift in Sources */,
+				58D6E7AF1A971CD500D03EA2 /* RLMSupport.swift in Sources */,
 				58D6E7801A970CC900D03EA2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +374,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/shiratsu/Downloads/realm-cocoa-0.90.5/ios",
+				);
 				INFOPLIST_FILE = RealmSample2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,6 +388,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/shiratsu/Downloads/realm-cocoa-0.90.5/ios",
+				);
 				INFOPLIST_FILE = RealmSample2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,6 +451,7 @@
 				58D6E79B1A970CCA00D03EA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58D6E79C1A970CCA00D03EA2 /* Build configuration list for PBXNativeTarget "RealmSample2Tests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +460,7 @@
 				58D6E79E1A970CCA00D03EA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
