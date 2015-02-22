@@ -26,7 +26,7 @@ class AddView: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func addTodo(sender: AnyObject) {
+    @IBAction func addTodo(id: AnyObject) {
         
         // Bookオブジェクト生成.
         let book = Book()
@@ -39,7 +39,7 @@ class AddView: UIViewController {
         realm.addObject(book)
         realm.commitWriteTransaction()
         
-        performSegueWithIdentifier("back",sender: nil)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
 }

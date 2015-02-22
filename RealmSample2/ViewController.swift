@@ -13,11 +13,17 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
 
     var myItems:RLMResults!
     
+    @IBOutlet weak var todoView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         myItems = Book.allObjects()
+        self.navigationItem.title = "Todoリスト"
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        todoView.reloadData()
     }
     
     /*
@@ -40,16 +46,18 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // Cellの.を取得する.
-        let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         
         // Cellに値を設定する.
         let book:Book = myItems.objectAtIndex(UInt(indexPath.row)) as! Book
         
-        cell.textLabel!.text = book.description
+        cell.textLabel!.text = book.name
         
         
         return cell
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
