@@ -1,0 +1,17 @@
+buildscript {
+  repositories {
+    maven {
+      url('http://openbakery.org/repository/')
+    }
+    mavenCentral()
+  }
+  dependencies {
+    classpath group: 'org.openbakery', name: 'xcodePlugin', version: '0.10.+'
+  }
+}
+apply plugin: 'xcode'
+
+xcodebuild {
+  target = 'RealmSample2'
+  version = '6.3'
+}
