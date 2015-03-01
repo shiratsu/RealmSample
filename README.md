@@ -10,5 +10,14 @@ http://pro-pri.com/ios/xcode6-sizeclasses-storyboard3/
 i want to use cocoapods to get Realm.but it does not work because program can not find a Realm.
 why?
 
+## How to build by gradle
+i writed command below.
+
+it is build which to output debug log. 
+```
+gradle xcodebuild --stacktrace --debug
+```
+
+
 ## Reference
 http://realm.io/
