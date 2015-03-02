@@ -13,7 +13,7 @@ why?
 ## How to build by gradle
 i writed command below.
 
-it is build which to output debug log. 
+it is build-script which to output debug log. 
 ```
 gradle xcodebuild --stacktrace --debug
 ```
